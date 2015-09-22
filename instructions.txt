@@ -1,0 +1,37 @@
+-- Basic Rules --
+[neumonic] [target/dest] <everything else>
+jumps can take 3 kinds of destinations
+    a label, an address register, or a relative offset
+
+
+-- Basic Instructions --
+label <label name>
+loadi <target data reg> <data>
+loada <target addr reg> <addr>
+addi <target data reg> <data reg A> <data>
+add <target data reg> <data reg A> <data reg B>
+halt
+
+-- jump instructions --
+jmp <dest>
+    jmp <:label
+    jmp <a0>
+    jmp <+10>
+    jmp <-1>
+jlt <dest> <data reg A> <data reg B>
+jlti <dest> <data reg A> <data>
+jgt <dest> <data reg A> <data reg B>
+jgti <dest> <data reg A> <data>
+je <dest> <data reg A> <data reg B>
+jei <dest> <data reg A> <data>
+
+-- stack instructions --
+push <data reg A>
+pop <data reg A>
+
+pushall
+popall
+
+-- sub routine instructions --
+call <label>
+ret
